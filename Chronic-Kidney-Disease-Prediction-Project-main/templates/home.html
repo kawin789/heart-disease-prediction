@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Kidney Disease Prediction</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://raw.githubusercontent.com/SagarDhandare/Chronic-Kidney-Disease-Prediction-Project/main/kidney.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    /* Animations */
+    .fadeIn {
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .zoomIn {
+      animation: zoomIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    
+    .jumbotron {
+      background-color: rgba(124, 120, 120, 0.77);
+      color:  rgb(255, 255, 255);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    .card {
+      border: 2px solid #007bff;
+      padding: 1rem;
+      margin: 1rem 0;
+      background-color: white;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .text-primary {
+      color: red;
+    }
+
+    .text-success {
+      color: blue;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .col-lg-4 {
+      flex: 1 1 calc(33.333% - 1rem);
+      text-align: center;
+    }
+
+    .predict-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .predict-button:hover {
+      background-color: blue;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <main role="main">
+    <a href="/predict" class="predict-button">Prediction</a>
+    <section class="jumbotron fadeIn">
+      <div class="container">
+        <h1 class="jumbotron-heading">Chronic Kidney Disease Prediction</h1>
+        <p class="lead">Chronic kidney disease (CKD) is one of the most critical health problems due to its increasing prevalence. In this paper, we aim to test the ability of machine learning algorithms for the prediction of chronic kidney disease using the smallest subset of features.</p>
+        <p>
+          <a href="https://www.mayoclinic.org/diseases-conditions/chronic-kidney-disease/symptoms-causes/syc-20354521" class="btn">Read More about the Disease</a>
+        </p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 card zoomIn">
+          <img src="https://cdn.pixabay.com/photo/2016/05/25/13/18/target-1414775_960_720.png" alt="Machine Learning">
+          <h2 class="text-primary">Machine Learning</h2>
+          <p>Random forest builds multiple decision trees and merges them together to get a more accurate and stable prediction.</p>
+        </div>
+        <div class="col-lg-4 card zoomIn">
+          <img src="https://www.edureka.co/blog/wp-content/uploads/2019/01/Classification-Random-Forest-Random-Forest-In-R-Edureka-2-381x300.png" alt="Algorithm">
+          <h2 class="text-success">Algorithm</h2>
+          <p>XGBoost is a decision-tree-based ensemble Machine Learning algorithm that uses a gradient boosting framework. It achieves high accuracy.</p>
+        </div>
+        <div class="col-lg-4 card zoomIn">
+          <img src="https://cdn.icon-icons.com/icons2/2593/PNG/512/data_icon_154512.png" alt="Data-Set">
+          <h2>Data-Set</h2>
+          <p>This dataset contains about 1338 records of data in various categories, used for preprocessing and exploratory data analysis.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
