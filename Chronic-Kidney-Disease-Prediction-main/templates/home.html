@@ -1,0 +1,157 @@
+{% extends 'main.html' %}
+{% block content %}
+{% if message %}
+<div class="alert alert-danger">{{ message }}</div>
+{% endif %}
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Kidney Disease Prediction</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      /* Animations */
+      .jumbotron {
+        animation: fadeIn 3s ease-in-out;
+      }
+
+      .card {
+        animation: zoomIn 2s ease-in-out;
+      }
+
+      .rounded-circle {
+        animation: rotate 5s linear infinite;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes zoomIn {
+        0% {
+          transform: scale(0.8);
+          opacity: 0.5;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+   
+
+      /* Custom Colors */
+      .bg-dark {
+        background-color: #343a40 !important;
+        border: 2px solid green;
+      }
+
+      .btn-primary {
+        background-color: #007bff !important;
+        border: 2px solid black;
+      }
+
+      .btn-primary:hover {
+        background-color:#1e6409 !important;
+      }
+
+      .card {
+        border: 2px solid black;
+      }
+
+      .text-primary {
+        color: green !important;
+      }
+
+      .text-success {
+        color: blue !important;
+      }
+    </style>
+  </head>
+  <body>
+    <main role="main">
+      <section class="jumbotron p-3 p-md-5 text-white rounded bg-ligh text-center" style="background-color: #1e6409 ">
+        <div class="container">
+          <h1 class="jumbotron-heading" style="color: red;">Chronic Kidney Disease Prediction</h1>
+          <p class="lead">Chronic kidney disease (CKD) is one of the most
+critical health problems due to its increasing prevalence. In this
+paper, we aim to test the ability of machine learning algorithms
+for the prediction of chronic kidney disease using the smallest
+subset of features</p>
+          <p>
+            <a href="https://www.mayoclinic.org/diseases-conditions/chronic-kidney-disease/symptoms-causes/syc-20354521" class="btn btn-primary my-2">Read More about the Disease</a>
+          </p>
+        </div>
+      </section>
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-primary">Machine Learning</strong>
+              <h3 class="mb-0">
+                <a class="text-dark" href="#">Random Forest</a>
+              </h3>
+              <div class="mb-1 text-muted">For Regression & Classification</div>
+              <p class="card-text mb-auto">Random forest is a supervised learning algorithm. ... The general idea of the bagging method is that a combination of learning models increases the overall result. Put simply: random forest builds multiple decision trees and merges them together to get a more accurate and stable prediction.</p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card flex-md-row mb-4 box-shadow h-md-250">
+            <div class="card-body d-flex flex-column align-items-start">
+              <strong class="d-inline-block mb-2 text-success">Model & Algorithm</strong>
+              <h3 class="mb-0">
+                <a class="text-dark" href="#">XGBoost</a>
+              </h3>
+              <div class="mb-1 text-muted">Gradient Boosting Machine</div>
+              <p class="card-text mb-auto">XGBoost is an algorithm that has recently been dominating applied machine learning and Kaggle competitions for structured or tabular data. XGBoost is an implementation of gradient boosted decision trees designed for speed and performance.</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container marketing">
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="https://cdn.icon-icons.com/icons2/2593/PNG/512/data_icon_154512.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Data-Set</h2>
+            <p>We have used the data set available in Kaggle - Chronic-Kidney Disease Prediction. After Classifying the data, Preprocessin and performed the Exploratory Data Analysis. This data set contains about 1338 records of data in various categories.</p>
+            <p></p>
+          </div>
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="https://www.edureka.co/blog/wp-content/uploads/2019/01/Classification-Random-Forest-Random-Forest-In-R-Edureka-2-381x300.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Algorithm</h2>
+            <p>Random Forest is a popular machine learning algorithm that belongs to the supervised learning technique. It can be used for both Classification and Regression problems in ML. It is based on the concept of ensemble learning to improve the performance of the model.</p>
+            <p></p>
+          </div>
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="https://cdn.pixabay.com/photo/2016/05/25/13/18/target-1414775_960_720.png" alt="Generic placeholder image" width="140" height="140">
+            <h2>Accuracy</h2>
+            <p>XGBoost is a decision-tree-based ensemble Machine Learning algorithm that uses a gradient boosting framework. In prediction problems involving unstructured data. After modelling our data, the Accuracy is <b>98%.</b> So far we achieved a Good accuracy. </p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
+{% endblock %}
